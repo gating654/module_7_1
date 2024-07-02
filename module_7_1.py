@@ -23,7 +23,7 @@ class Shop():
 
     def add(self, *products):
         for product in products:
-            if product.name not in self.get_products():
+            if product not in self.fr:
                 self.fw.write(str(product))
                 self.fw.write('\n')
             else:
@@ -42,3 +42,4 @@ print(p2)
 s1.add(p1, p2, p3)
 
 print(s1.get_products())
+
